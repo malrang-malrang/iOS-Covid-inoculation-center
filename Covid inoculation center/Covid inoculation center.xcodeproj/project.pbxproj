@@ -13,6 +13,8 @@
 		3001BC532912452A0069C2FD /* Encodable+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001BC522912452A0069C2FD /* Encodable+Sugar.swift */; };
 		3001BC562912454B0069C2FD /* Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001BC552912454B0069C2FD /* Json.swift */; };
 		3001BC582912463F0069C2FD /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001BC572912463F0069C2FD /* Endpoint.swift */; };
+		3001BC5F291249460069C2FD /* CenterInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001BC5E291249460069C2FD /* CenterInformation.swift */; };
+		3001BC6129124B420069C2FD /* CenterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001BC6029124B420069C2FD /* CenterRequest.swift */; };
 		304D15F629123F2F000C47CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304D15F529123F2F000C47CC /* AppDelegate.swift */; };
 		304D15F829123F2F000C47CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304D15F729123F2F000C47CC /* SceneDelegate.swift */; };
 		304D15FF29123F30000C47CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 304D15FE29123F30000C47CC /* Assets.xcassets */; };
@@ -49,6 +51,8 @@
 		3001BC522912452A0069C2FD /* Encodable+Sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Sugar.swift"; sourceTree = "<group>"; };
 		3001BC552912454B0069C2FD /* Json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Json.swift; sourceTree = "<group>"; };
 		3001BC572912463F0069C2FD /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		3001BC5E291249460069C2FD /* CenterInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterInformation.swift; sourceTree = "<group>"; };
+		3001BC6029124B420069C2FD /* CenterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterRequest.swift; sourceTree = "<group>"; };
 		304D15F229123F2F000C47CC /* Covid inoculation center.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Covid inoculation center.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		304D15F529123F2F000C47CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		304D15F729123F2F000C47CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +119,15 @@
 				3001BC552912454B0069C2FD /* Json.swift */,
 			);
 			path = Singletone;
+			sourceTree = "<group>";
+		};
+		3001BC5D291249390069C2FD /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				3001BC5E291249460069C2FD /* CenterInformation.swift */,
+				3001BC6029124B420069C2FD /* CenterRequest.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		304D15E929123F2F000C47CC = {
@@ -221,6 +234,7 @@
 		304D1638291241ED000C47CC /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				3001BC5D291249390069C2FD /* Entity */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -371,6 +385,8 @@
 				304D15F629123F2F000C47CC /* AppDelegate.swift in Sources */,
 				3001BC4E291244820069C2FD /* NetworkError.swift in Sources */,
 				304D15F829123F2F000C47CC /* SceneDelegate.swift in Sources */,
+				3001BC6129124B420069C2FD /* CenterRequest.swift in Sources */,
+				3001BC5F291249460069C2FD /* CenterInformation.swift in Sources */,
 				3001BC4C291244200069C2FD /* HTTPMethod.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
