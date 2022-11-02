@@ -14,12 +14,12 @@ final class CovidInoculationCenterRepository: CovidInoculationCenterRepositoryPr
         self.networkManger = networkManger
     }
 
-    func fetchCenterList(pageNumber: Int, perPages: Int) -> Observable<CenterInformation> {
+    func fetchCenterList(pageNumber: Int, perPages: Int) -> Observable<CenterInformationList> {
         let endpoint = EndPointStrage
             .fetchCenterList(pageNumber: pageNumber, perPages: perPages)
             .endpoint
 
         return self.networkManger.request(endPoint: endpoint)
-            .decode(type: CenterInformation.self, decoder: Json.decoder)
+            .decode(type: CenterInformationList.self, decoder: Json.decoder)
     }
 }

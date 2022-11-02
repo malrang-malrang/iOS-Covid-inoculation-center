@@ -8,5 +8,5 @@
 import RxSwift
 
 protocol CovidInoculationCenterRepositoryProtocol {
-    func fetchCenterList(pageNumber: Int, perPages: Int) -> Observable<CenterInformation>
+    func fetchCenterList(pageNumber: Int, perPages: Int) -> Observable<CenterInformationList>
 }
