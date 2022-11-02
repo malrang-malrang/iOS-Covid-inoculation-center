@@ -180,9 +180,17 @@
 			children = (
 				3001BC70291254B40069C2FD /* MockDataTestManager.swift */,
 				3001BC72291254C80069C2FD /* MockURLProtocol.swift */,
-				304D160C29123F30000C47CC /* Covid_inoculation_centerTests.swift */,
+				3001BC7629125F320069C2FD /* NetworkManagerTests */,
 			);
 			path = DataTests;
+			sourceTree = "<group>";
+		};
+		3001BC7629125F320069C2FD /* NetworkManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				304D160C29123F30000C47CC /* Covid_inoculation_centerTests.swift */,
+			);
+			path = NetworkManagerTests;
 			sourceTree = "<group>";
 		};
 		304D15E929123F2F000C47CC = {
