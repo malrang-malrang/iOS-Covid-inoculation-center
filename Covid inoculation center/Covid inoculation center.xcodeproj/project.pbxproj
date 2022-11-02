@@ -16,6 +16,8 @@
 		3001BC5A291246790069C2FD /* EndpointStrage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001BC59291246790069C2FD /* EndpointStrage.swift */; };
 		3001BC5F291249460069C2FD /* CenterInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001BC5E291249460069C2FD /* CenterInformation.swift */; };
 		3001BC6129124B420069C2FD /* CenterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001BC6029124B420069C2FD /* CenterRequest.swift */; };
+		3001BC6329124CFF0069C2FD /* CovidInoculationCenterInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3001BC6229124CFF0069C2FD /* CovidInoculationCenterInfo.plist */; };
+		3001BC6529124D880069C2FD /* Bundle+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001BC6429124D880069C2FD /* Bundle+Sugar.swift */; };
 		304D15F629123F2F000C47CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304D15F529123F2F000C47CC /* AppDelegate.swift */; };
 		304D15F829123F2F000C47CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304D15F729123F2F000C47CC /* SceneDelegate.swift */; };
 		304D15FF29123F30000C47CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 304D15FE29123F30000C47CC /* Assets.xcassets */; };
@@ -55,6 +57,8 @@
 		3001BC59291246790069C2FD /* EndpointStrage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointStrage.swift; sourceTree = "<group>"; };
 		3001BC5E291249460069C2FD /* CenterInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterInformation.swift; sourceTree = "<group>"; };
 		3001BC6029124B420069C2FD /* CenterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterRequest.swift; sourceTree = "<group>"; };
+		3001BC6229124CFF0069C2FD /* CovidInoculationCenterInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = CovidInoculationCenterInfo.plist; sourceTree = "<group>"; };
+		3001BC6429124D880069C2FD /* Bundle+Sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Sugar.swift"; sourceTree = "<group>"; };
 		304D15F229123F2F000C47CC /* Covid inoculation center.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Covid inoculation center.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		304D15F529123F2F000C47CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		304D15F729123F2F000C47CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +115,7 @@
 		3001BC51291245190069C2FD /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				3001BC6429124D880069C2FD /* Bundle+Sugar.swift */,
 				3001BC522912452A0069C2FD /* Encodable+Sugar.swift */,
 			);
 			path = Extension;
@@ -157,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				304D160329123F30000C47CC /* Info.plist */,
+				3001BC6229124CFF0069C2FD /* CovidInoculationCenterInfo.plist */,
 				304D16342912400A000C47CC /* Application */,
 				304D163329124000000C47CC /* Resource */,
 				304D163229123FF8000C47CC /* Sources */,
@@ -355,6 +361,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3001BC6329124CFF0069C2FD /* CovidInoculationCenterInfo.plist in Resources */,
 				304D160229123F30000C47CC /* LaunchScreen.storyboard in Resources */,
 				304D15FF29123F30000C47CC /* Assets.xcassets in Resources */,
 			);
@@ -385,6 +392,7 @@
 				3001BC532912452A0069C2FD /* Encodable+Sugar.swift in Sources */,
 				3001BC582912463F0069C2FD /* Endpoint.swift in Sources */,
 				3001BC50291244D70069C2FD /* Requestable.swift in Sources */,
+				3001BC6529124D880069C2FD /* Bundle+Sugar.swift in Sources */,
 				304D15F629123F2F000C47CC /* AppDelegate.swift in Sources */,
 				3001BC5A291246790069C2FD /* EndpointStrage.swift in Sources */,
 				3001BC4E291244820069C2FD /* NetworkError.swift in Sources */,
