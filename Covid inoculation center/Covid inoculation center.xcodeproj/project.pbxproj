@@ -24,6 +24,9 @@
 		3001BC71291254B40069C2FD /* MockDataTestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001BC70291254B40069C2FD /* MockDataTestManager.swift */; };
 		3001BC73291254C80069C2FD /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001BC72291254C80069C2FD /* MockURLProtocol.swift */; };
 		3001BC75291256640069C2FD /* CenterInformationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001BC74291256640069C2FD /* CenterInformationList.swift */; };
+		3001BC8129126B3F0069C2FD /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001BC8029126B3F0069C2FD /* AppCoordinator.swift */; };
+		3001BC8329126C380069C2FD /* CovidCenterListSearchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001BC8229126C380069C2FD /* CovidCenterListSearchUseCase.swift */; };
+		3001BC85291275130069C2FD /* MainViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001BC84291275130069C2FD /* MainViewCoordinator.swift */; };
 		304D15F629123F2F000C47CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304D15F529123F2F000C47CC /* AppDelegate.swift */; };
 		304D15F829123F2F000C47CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304D15F729123F2F000C47CC /* SceneDelegate.swift */; };
 		304D15FF29123F30000C47CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 304D15FE29123F30000C47CC /* Assets.xcassets */; };
@@ -71,6 +74,9 @@
 		3001BC70291254B40069C2FD /* MockDataTestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataTestManager.swift; sourceTree = "<group>"; };
 		3001BC72291254C80069C2FD /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		3001BC74291256640069C2FD /* CenterInformationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterInformationList.swift; sourceTree = "<group>"; };
+		3001BC8029126B3F0069C2FD /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		3001BC8229126C380069C2FD /* CovidCenterListSearchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidCenterListSearchUseCase.swift; sourceTree = "<group>"; };
+		3001BC84291275130069C2FD /* MainViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCoordinator.swift; sourceTree = "<group>"; };
 		304D15F229123F2F000C47CC /* Covid inoculation center.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Covid inoculation center.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		304D15F529123F2F000C47CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		304D15F729123F2F000C47CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +177,7 @@
 		3001BC6C291254100069C2FD /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				3001BC8229126C380069C2FD /* CovidCenterListSearchUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -191,6 +198,21 @@
 				304D160C29123F30000C47CC /* NetworkManagerTests.swift */,
 			);
 			path = NetworkManagerTests;
+			sourceTree = "<group>";
+		};
+		3001BC7E29126B1D0069C2FD /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		3001BC7F29126B290069C2FD /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				3001BC84291275130069C2FD /* MainViewCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		304D15E929123F2F000C47CC = {
@@ -267,6 +289,7 @@
 			children = (
 				304D15F529123F2F000C47CC /* AppDelegate.swift */,
 				304D15F729123F2F000C47CC /* SceneDelegate.swift */,
+				3001BC8029126B3F0069C2FD /* AppCoordinator.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -292,6 +315,8 @@
 		304D1637291241E0000C47CC /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				3001BC7F29126B290069C2FD /* Coordinator */,
+				3001BC7E29126B1D0069C2FD /* Main */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -448,7 +473,10 @@
 			files = (
 				3001BC562912454B0069C2FD /* Json.swift in Sources */,
 				3001BC532912452A0069C2FD /* Encodable+Sugar.swift in Sources */,
+				3001BC85291275130069C2FD /* MainViewCoordinator.swift in Sources */,
+				3001BC8129126B3F0069C2FD /* AppCoordinator.swift in Sources */,
 				3001BC6A291253160069C2FD /* CovidCinoculationCenterRepository.swift in Sources */,
+				3001BC8329126C380069C2FD /* CovidCenterListSearchUseCase.swift in Sources */,
 				3001BC582912463F0069C2FD /* Endpoint.swift in Sources */,
 				3001BC67291252040069C2FD /* NetworkManager.swift in Sources */,
 				3001BC50291244D70069C2FD /* Requestable.swift in Sources */,

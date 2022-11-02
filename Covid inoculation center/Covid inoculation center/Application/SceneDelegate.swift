@@ -9,12 +9,26 @@ import UIKit
 
 final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
+    private var coordinator: AppCoordinator?
 
     func scene(
         _ scene: UIScene,
         willConnectTo session: UISceneSession,
         options connectionOptions: UIScene.ConnectionOptions
     ) {
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        let window = UIWindow(windowScene: windowScene)
+        self.window = window
+        self.window?.makeKeyAndVisible()
+
+        let navigationController = UINavigationController()
+        navigationController.navigationBar.shadowImage = UIImage()
+        navigationController.navigationBar.setBackgroundImage(
+            UIImage(),
+            for: UIBarMetrics.default
+        )
+        self.window?.rootViewController = navigationController
+        self.coordinator = AppCoordinator(navigationController: navigationController)
+        self.coordinator?.start()
     }
 }
