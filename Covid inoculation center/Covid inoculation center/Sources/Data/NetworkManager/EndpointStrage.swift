@@ -8,8 +8,8 @@
 import Foundation
 
 private enum Const {
-    static let baseURL = "https://api.odcloud.kr"
-    static let basePath = "/api/15077586/v1/centers"
+    static let baseURL = "https://api.odcloud.kr/api"
+    static let basePath = "/15077586/v1/centers"
 }
 
 enum EndPointStrage {
