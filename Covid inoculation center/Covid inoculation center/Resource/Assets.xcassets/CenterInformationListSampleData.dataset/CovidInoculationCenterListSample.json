@@ -1,0 +1,169 @@
+{
+  "page": 1,
+  "perPage": 10,
+  "totalCount": 10,
+  "currentCount": 0,
+  "matchCount": 0,
+  "data": [
+    {
+      "id": 1,
+      "centerName": "덕산병원",
+      "sido": "",
+      "sigungu": "string",
+      "facilityName": "string",
+      "zipCode": "string",
+      "address": "string",
+      "lat": "string",
+      "lng": "string",
+      "createdAt": "string",
+      "updatedAt": "string",
+      "centerType": "string",
+      "org": "string",
+      "phoneNumber": "010-1111-1111"
+    }
+    {
+      "id": 1,
+      "centerName": "예산병원",
+      "sido": "",
+      "sigungu": "string",
+      "facilityName": "string",
+      "zipCode": "string",
+      "address": "string",
+      "lat": "string",
+      "lng": "string",
+      "createdAt": "string",
+      "updatedAt": "string",
+      "centerType": "string",
+      "org": "string",
+      "phoneNumber": "010-1111-2222"
+    }
+    {
+      "id": 1,
+      "centerName": "홍성병원",
+      "sido": "",
+      "sigungu": "string",
+      "facilityName": "string",
+      "zipCode": "string",
+      "address": "string",
+      "lat": "string",
+      "lng": "string",
+      "createdAt": "string",
+      "updatedAt": "string",
+      "centerType": "string",
+      "org": "string",
+      "phoneNumber": "010-1111-3333"
+    }
+    {
+      "id": 1,
+      "centerName": "내포병원",
+      "sido": "",
+      "sigungu": "string",
+      "facilityName": "string",
+      "zipCode": "string",
+      "address": "string",
+      "lat": "string",
+      "lng": "string",
+      "createdAt": "string",
+      "updatedAt": "string",
+      "centerType": "string",
+      "org": "string",
+      "phoneNumber": "010-1111-4444"
+    }
+    {
+      "id": 1,
+      "centerName": "고덕병원",
+      "sido": "",
+      "sigungu": "string",
+      "facilityName": "string",
+      "zipCode": "string",
+      "address": "string",
+      "lat": "string",
+      "lng": "string",
+      "createdAt": "string",
+      "updatedAt": "string",
+      "centerType": "string",
+      "org": "string",
+      "phoneNumber": "010-1111-5555"
+    }
+    {
+      "id": 1,
+      "centerName": "대전병원",
+      "sido": "",
+      "sigungu": "string",
+      "facilityName": "string",
+      "zipCode": "string",
+      "address": "string",
+      "lat": "string",
+      "lng": "string",
+      "createdAt": "string",
+      "updatedAt": "string",
+      "centerType": "string",
+      "org": "string",
+      "phoneNumber": "010-1111-6666"
+    }
+    {
+      "id": 1,
+      "centerName": "한방병원",
+      "sido": "",
+      "sigungu": "string",
+      "facilityName": "string",
+      "zipCode": "string",
+      "address": "string",
+      "lat": "string",
+      "lng": "string",
+      "createdAt": "string",
+      "updatedAt": "string",
+      "centerType": "string",
+      "org": "string",
+      "phoneNumber": "010-1111-7777"
+    }
+    {
+      "id": 1,
+      "centerName": "정신병원",
+      "sido": "",
+      "sigungu": "string",
+      "facilityName": "string",
+      "zipCode": "string",
+      "address": "string",
+      "lat": "string",
+      "lng": "string",
+      "createdAt": "string",
+      "updatedAt": "string",
+      "centerType": "string",
+      "org": "string",
+      "phoneNumber": "010-1111-8888"
+    }
+    {
+      "id": 1,
+      "centerName": "정형외과",
+      "sido": "",
+      "sigungu": "string",
+      "facilityName": "string",
+      "zipCode": "string",
+      "address": "string",
+      "lat": "string",
+      "lng": "string",
+      "createdAt": "string",
+      "updatedAt": "string",
+      "centerType": "string",
+      "org": "string",
+      "phoneNumber": "010-1111-9999"
+    }
+    {
+      "id": 1,
+      "centerName": "덕산의원",
+      "sido": "",
+      "sigungu": "string",
+      "facilityName": "string",
+      "zipCode": "string",
+      "address": "string",
+      "lat": "string",
+      "lng": "string",
+      "createdAt": "string",
+      "updatedAt": "string",
+      "centerType": "string",
+      "org": "string",
+      "phoneNumber": "010-1111-0000"
+    }
+  ]
+}

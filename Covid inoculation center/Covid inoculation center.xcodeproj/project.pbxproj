@@ -21,6 +21,8 @@
 		3001BC67291252040069C2FD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001BC66291252040069C2FD /* NetworkManager.swift */; };
 		3001BC6A291253160069C2FD /* CovidCinoculationCenterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001BC69291253160069C2FD /* CovidCinoculationCenterRepository.swift */; };
 		3001BC6E2912542C0069C2FD /* CovidInoculationCenterRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001BC6D2912542C0069C2FD /* CovidInoculationCenterRepositoryProtocol.swift */; };
+		3001BC71291254B40069C2FD /* MockDataTestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001BC70291254B40069C2FD /* MockDataTestManager.swift */; };
+		3001BC73291254C80069C2FD /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001BC72291254C80069C2FD /* MockURLProtocol.swift */; };
 		3001BC75291256640069C2FD /* CenterListInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001BC74291256640069C2FD /* CenterListInformation.swift */; };
 		304D15F629123F2F000C47CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304D15F529123F2F000C47CC /* AppDelegate.swift */; };
 		304D15F829123F2F000C47CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304D15F729123F2F000C47CC /* SceneDelegate.swift */; };
@@ -66,6 +68,8 @@
 		3001BC66291252040069C2FD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		3001BC69291253160069C2FD /* CovidCinoculationCenterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidCinoculationCenterRepository.swift; sourceTree = "<group>"; };
 		3001BC6D2912542C0069C2FD /* CovidInoculationCenterRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidInoculationCenterRepositoryProtocol.swift; sourceTree = "<group>"; };
+		3001BC70291254B40069C2FD /* MockDataTestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataTestManager.swift; sourceTree = "<group>"; };
+		3001BC72291254C80069C2FD /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		3001BC74291256640069C2FD /* CenterListInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterListInformation.swift; sourceTree = "<group>"; };
 		304D15F229123F2F000C47CC /* Covid inoculation center.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Covid inoculation center.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		304D15F529123F2F000C47CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +175,16 @@
 			path = UseCase;
 			sourceTree = "<group>";
 		};
+		3001BC6F291254970069C2FD /* DataTests */ = {
+			isa = PBXGroup;
+			children = (
+				3001BC70291254B40069C2FD /* MockDataTestManager.swift */,
+				3001BC72291254C80069C2FD /* MockURLProtocol.swift */,
+				304D160C29123F30000C47CC /* Covid_inoculation_centerTests.swift */,
+			);
+			path = DataTests;
+			sourceTree = "<group>";
+		};
 		304D15E929123F2F000C47CC = {
 			isa = PBXGroup;
 			children = (
@@ -206,7 +220,7 @@
 		304D160B29123F30000C47CC /* Covid inoculation centerTests */ = {
 			isa = PBXGroup;
 			children = (
-				304D160C29123F30000C47CC /* Covid_inoculation_centerTests.swift */,
+				3001BC6F291254970069C2FD /* DataTests */,
 			);
 			path = "Covid inoculation centerTests";
 			sourceTree = "<group>";
@@ -447,7 +461,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3001BC73291254C80069C2FD /* MockURLProtocol.swift in Sources */,
 				304D160D29123F30000C47CC /* Covid_inoculation_centerTests.swift in Sources */,
+				3001BC71291254B40069C2FD /* MockDataTestManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
