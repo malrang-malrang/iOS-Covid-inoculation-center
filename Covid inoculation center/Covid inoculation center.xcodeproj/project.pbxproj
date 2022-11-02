@@ -18,6 +18,7 @@
 		3001BC6129124B420069C2FD /* CenterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001BC6029124B420069C2FD /* CenterRequest.swift */; };
 		3001BC6329124CFF0069C2FD /* CovidInoculationCenterInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3001BC6229124CFF0069C2FD /* CovidInoculationCenterInfo.plist */; };
 		3001BC6529124D880069C2FD /* Bundle+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001BC6429124D880069C2FD /* Bundle+Sugar.swift */; };
+		3001BC67291252040069C2FD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001BC66291252040069C2FD /* NetworkManager.swift */; };
 		304D15F629123F2F000C47CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304D15F529123F2F000C47CC /* AppDelegate.swift */; };
 		304D15F829123F2F000C47CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304D15F729123F2F000C47CC /* SceneDelegate.swift */; };
 		304D15FF29123F30000C47CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 304D15FE29123F30000C47CC /* Assets.xcassets */; };
@@ -59,6 +60,7 @@
 		3001BC6029124B420069C2FD /* CenterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterRequest.swift; sourceTree = "<group>"; };
 		3001BC6229124CFF0069C2FD /* CovidInoculationCenterInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = CovidInoculationCenterInfo.plist; sourceTree = "<group>"; };
 		3001BC6429124D880069C2FD /* Bundle+Sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Sugar.swift"; sourceTree = "<group>"; };
+		3001BC66291252040069C2FD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		304D15F229123F2F000C47CC /* Covid inoculation center.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Covid inoculation center.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		304D15F529123F2F000C47CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		304D15F729123F2F000C47CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				3001BC4B291244200069C2FD /* HTTPMethod.swift */,
+				3001BC66291252040069C2FD /* NetworkManager.swift */,
 				3001BC4D291244820069C2FD /* NetworkError.swift */,
 				3001BC4F291244D70069C2FD /* Requestable.swift */,
 				3001BC572912463F0069C2FD /* Endpoint.swift */,
@@ -391,6 +394,7 @@
 				3001BC562912454B0069C2FD /* Json.swift in Sources */,
 				3001BC532912452A0069C2FD /* Encodable+Sugar.swift in Sources */,
 				3001BC582912463F0069C2FD /* Endpoint.swift in Sources */,
+				3001BC67291252040069C2FD /* NetworkManager.swift in Sources */,
 				3001BC50291244D70069C2FD /* Requestable.swift in Sources */,
 				3001BC6529124D880069C2FD /* Bundle+Sugar.swift in Sources */,
 				304D15F629123F2F000C47CC /* AppDelegate.swift in Sources */,
