@@ -42,6 +42,7 @@
 		30BE24482913980C00EBE741 /* UIView+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BE24472913980C00EBE741 /* UIView+Sugar.swift */; };
 		30BE244A2913981500EBE741 /* UIStackView+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BE24492913981500EBE741 /* UIStackView+Sugar.swift */; };
 		30BE244C2913984100EBE741 /* CenterInformationCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BE244B2913984100EBE741 /* CenterInformationCellViewModel.swift */; };
+		30BE244E29139A8200EBE741 /* CenterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BE244D29139A8200EBE741 /* CenterListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		30BE24472913980C00EBE741 /* UIView+Sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Sugar.swift"; sourceTree = "<group>"; };
 		30BE24492913981500EBE741 /* UIStackView+Sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Sugar.swift"; sourceTree = "<group>"; };
 		30BE244B2913984100EBE741 /* CenterInformationCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterInformationCellViewModel.swift; sourceTree = "<group>"; };
+		30BE244D29139A8200EBE741 /* CenterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				3001BC862912765A0069C2FD /* MainViewController.swift */,
+				30BE244D29139A8200EBE741 /* CenterListViewModel.swift */,
 				30BE24442913841C00EBE741 /* Cell */,
 			);
 			path = Main;
@@ -517,6 +520,7 @@
 				3001BC6129124B420069C2FD /* CenterRequest.swift in Sources */,
 				3001BC5F291249460069C2FD /* CenterInformation.swift in Sources */,
 				3001BC4C291244200069C2FD /* HTTPMethod.swift in Sources */,
+				30BE244E29139A8200EBE741 /* CenterListViewModel.swift in Sources */,
 				3001BC872912765A0069C2FD /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
