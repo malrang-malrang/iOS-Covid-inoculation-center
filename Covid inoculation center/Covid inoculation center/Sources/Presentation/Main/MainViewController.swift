@@ -16,7 +16,6 @@ private enum Const {
 }
 
 final class MainViewController: UIViewController {
-//    private let refreshControl = UIRefreshControl()
     private let coordinator: MainViewCoordinatorProtocol
     private let disposeBag = DisposeBag()
     private let viewModel: MainViewModelable
@@ -70,7 +69,10 @@ final class MainViewController: UIViewController {
     private func bind() {
         self.viewModel.error
             .bind { [weak self] error in
-
+                self?.coordinator.showErrorAlert(
+                    title: error.identifier,
+                    message: error.errorMessage
+                )
             }
             .disposed(by: self.disposeBag)
 

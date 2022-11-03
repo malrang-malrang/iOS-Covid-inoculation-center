@@ -43,6 +43,8 @@
 		30BE244A2913981500EBE741 /* UIStackView+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BE24492913981500EBE741 /* UIStackView+Sugar.swift */; };
 		30BE244C2913984100EBE741 /* CenterInformationCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BE244B2913984100EBE741 /* CenterInformationCellViewModel.swift */; };
 		30BE244E29139A8200EBE741 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BE244D29139A8200EBE741 /* MainViewModel.swift */; };
+		30BE2450291407EC00EBE741 /* AlertBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BE244F291407EC00EBE741 /* AlertBuilder.swift */; };
+		30BE24522914088000EBE741 /* Error+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BE24512914088000EBE741 /* Error+Sugar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +102,8 @@
 		30BE24492913981500EBE741 /* UIStackView+Sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Sugar.swift"; sourceTree = "<group>"; };
 		30BE244B2913984100EBE741 /* CenterInformationCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterInformationCellViewModel.swift; sourceTree = "<group>"; };
 		30BE244D29139A8200EBE741 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		30BE244F291407EC00EBE741 /* AlertBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBuilder.swift; sourceTree = "<group>"; };
+		30BE24512914088000EBE741 /* Error+Sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Sugar.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +152,7 @@
 			children = (
 				3001BC6429124D880069C2FD /* Bundle+Sugar.swift */,
 				3001BC522912452A0069C2FD /* Encodable+Sugar.swift */,
+				30BE24512914088000EBE741 /* Error+Sugar.swift */,
 				30BE24472913980C00EBE741 /* UIView+Sugar.swift */,
 				30BE24492913981500EBE741 /* UIStackView+Sugar.swift */,
 			);
@@ -158,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				3001BC552912454B0069C2FD /* Json.swift */,
+				30BE244F291407EC00EBE741 /* AlertBuilder.swift */,
 			);
 			path = Singletone;
 			sourceTree = "<group>";
@@ -501,6 +507,7 @@
 				3001BC562912454B0069C2FD /* Json.swift in Sources */,
 				30BE244C2913984100EBE741 /* CenterInformationCellViewModel.swift in Sources */,
 				3001BC532912452A0069C2FD /* Encodable+Sugar.swift in Sources */,
+				30BE24522914088000EBE741 /* Error+Sugar.swift in Sources */,
 				3001BC85291275130069C2FD /* MainViewCoordinator.swift in Sources */,
 				3001BC8129126B3F0069C2FD /* AppCoordinator.swift in Sources */,
 				3001BC6A291253160069C2FD /* CovidCinoculationCenterRepository.swift in Sources */,
@@ -515,6 +522,7 @@
 				3001BC5A291246790069C2FD /* EndpointStrage.swift in Sources */,
 				3001BC4E291244820069C2FD /* NetworkError.swift in Sources */,
 				30BE24482913980C00EBE741 /* UIView+Sugar.swift in Sources */,
+				30BE2450291407EC00EBE741 /* AlertBuilder.swift in Sources */,
 				30BE24462913842900EBE741 /* CenterInformationCell.swift in Sources */,
 				304D15F829123F2F000C47CC /* SceneDelegate.swift in Sources */,
 				3001BC6129124B420069C2FD /* CenterRequest.swift in Sources */,
