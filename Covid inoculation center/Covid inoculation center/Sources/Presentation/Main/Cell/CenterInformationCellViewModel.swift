@@ -17,7 +17,7 @@ protocol CenterInformationCellOutput {
     var centerName: String { get }
     var facilityName: String { get }
     var address: String { get }
-    var updateAt: String { get }
+    var updatedAt: String { get }
 }
 
 final class CenterInformationCellViewModel: CenterInformationCellViewModelable {
@@ -41,7 +41,7 @@ final class CenterInformationCellViewModel: CenterInformationCellViewModelable {
         return self.centerInformation.address ?? Const.unknown
     }
 
-    var updateAt: String {
-        return self.centerInformation.updateAt ?? Const.unknown
+    var updatedAt: String {
+        return self.centerInformation.updatedAt ?? Const.unknown
     }
 }

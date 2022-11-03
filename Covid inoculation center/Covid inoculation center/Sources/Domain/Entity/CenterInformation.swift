@@ -11,7 +11,7 @@ struct CenterInformation: Decodable {
     let centerName: String?
     let facilityName: String?
     let address: String?
-    let updateAt: String?
+    let updatedAt: String?
     let phoneNumber: String?
     let lat: String?
     let lng: String?

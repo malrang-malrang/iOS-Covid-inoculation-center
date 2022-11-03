@@ -5,6 +5,8 @@
 //  Created by 김동욱 on 2022/11/03.
 //
 
+import Foundation
+
 import RxSwift
 import RxRelay
 
@@ -66,6 +68,10 @@ final class MainViewModel: MainViewModelable {
     }
 
     var centerList: Observable<[CenterInformation]> {
-        return self.centerListRelay.asObservable()
+        return self.centerListRelay
+            .map {
+                $0.sorted { $0.updatedAt?.toDate() ?? Date() < $1.updatedAt?.toDate() ?? Date() }
+            }
+            .asObservable()
     }
 }

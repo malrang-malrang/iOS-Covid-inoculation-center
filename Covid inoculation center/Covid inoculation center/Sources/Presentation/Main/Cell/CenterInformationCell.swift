@@ -115,6 +115,6 @@ final class CenterInformationCell: UITableViewCell {
         self.centerNameLabel.text = viewModel.centerName
         self.facilityNameLabel.text = viewModel.facilityName
         self.addressLabel.text = viewModel.address
-        self.updateAtLabel.text = viewModel.updateAt
+        self.updateAtLabel.text = viewModel.updatedAt
     }
 }
