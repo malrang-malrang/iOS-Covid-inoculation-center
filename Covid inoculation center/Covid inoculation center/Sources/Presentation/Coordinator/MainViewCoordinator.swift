@@ -26,5 +26,8 @@ final class MainViewCoordinator: Coordinator, MainViewCoordinatorProtocol {
         self.covidCenterListSearchUseCase = covidCenterListSearchUseCase
     }
 
-    func start() {}
+    func start() {
+        let mainView = MainViewController(coordinator: self)
+        self.navigationController.pushViewController(mainView, animated: true)
+    }
 }
