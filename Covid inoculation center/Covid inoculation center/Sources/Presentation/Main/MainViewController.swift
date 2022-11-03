@@ -19,6 +19,7 @@ final class MainViewController: UIViewController {
     private let coordinator: MainViewCoordinatorProtocol
     private let disposeBag = DisposeBag()
     private let viewModel: MainViewModelable
+    private let scrollToTopButton = ScrollToTopButton()
 
     private let tableView: UITableView = {
         let tableView = UITableView()
@@ -56,13 +57,20 @@ final class MainViewController: UIViewController {
 
     private func setupView() {
         self.view.backgroundColor = .systemGray6
-        self.view.addSubview(self.tableView)
+        self.view.addSubviews(self.tableView, self.scrollToTopButton)
     }
 
     private func setupConstraint() {
         self.tableView.snp.makeConstraints {
             $0.top.equalTo(self.view.safeAreaLayoutGuide)
             $0.leading.trailing.bottom.equalToSuperview()
+        }
+
+        self.scrollToTopButton.snp.makeConstraints {
+            $0.trailing.equalToSuperview().multipliedBy(0.9)
+            $0.bottom.equalToSuperview().multipliedBy(0.9)
+            $0.height.equalToSuperview().multipliedBy(0.05)
+            $0.width.equalTo(self.scrollToTopButton.snp.height)
         }
     }
 
@@ -101,6 +109,12 @@ final class MainViewController: UIViewController {
         self.tableView.rx.prefetchRows
             .bind(onNext: { [weak self] indexPath in
                 self?.viewModel.fetchNextPage(indexPath: indexPath.last?.row)
+            })
+            .disposed(by: self.disposeBag)
+
+        self.scrollToTopButton.rx.tap
+            .bind(onNext: { [weak self] _ in
+                self?.tableView.setContentOffset(.zero, animated: true)
             })
             .disposed(by: self.disposeBag)
     }

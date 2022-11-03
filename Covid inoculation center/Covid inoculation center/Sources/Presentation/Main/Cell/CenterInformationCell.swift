@@ -31,7 +31,8 @@ final class CenterInformationCell: UITableViewCell {
         let label = UILabel()
         label.text = Const.centerName
         label.textColor = .systemGray2
-
+        label.font = .preferredFont(forTextStyle: .footnote)
+        
         return label
     }()
 
@@ -39,6 +40,7 @@ final class CenterInformationCell: UITableViewCell {
         let label = UILabel()
         label.text = Const.facilityName
         label.textColor = .systemGray2
+        label.font = .preferredFont(forTextStyle: .footnote)
 
         return label
     }()
@@ -47,6 +49,7 @@ final class CenterInformationCell: UITableViewCell {
         let label = UILabel()
         label.text = Const.address
         label.textColor = .systemGray2
+        label.font = .preferredFont(forTextStyle: .footnote)
 
         return label
     }()
@@ -55,6 +58,7 @@ final class CenterInformationCell: UITableViewCell {
         let label = UILabel()
         label.text = Const.updateAt
         label.textColor = .systemGray2
+        label.font = .preferredFont(forTextStyle: .footnote)
 
         return label
     }()
@@ -67,10 +71,33 @@ final class CenterInformationCell: UITableViewCell {
         return stackView
     }()
 
-    private let centerNameLabel = UILabel()
-    private let facilityNameLabel = UILabel()
-    private let addressLabel = UILabel()
-    private let updateAtLabel = UILabel()
+    private let centerNameLabel: UILabel = {
+        let label = UILabel()
+        label.font = .preferredFont(forTextStyle: .footnote)
+
+        return label
+    }()
+
+    private let facilityNameLabel: UILabel = {
+        let label = UILabel()
+        label.font = .preferredFont(forTextStyle: .footnote)
+
+        return label
+    }()
+
+    private let addressLabel: UILabel = {
+        let label = UILabel()
+        label.font = .preferredFont(forTextStyle: .footnote)
+
+        return label
+    }()
+
+    private let updateAtLabel: UILabel = {
+        let label = UILabel()
+        label.font = .preferredFont(forTextStyle: .footnote)
+
+        return label
+    }()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
