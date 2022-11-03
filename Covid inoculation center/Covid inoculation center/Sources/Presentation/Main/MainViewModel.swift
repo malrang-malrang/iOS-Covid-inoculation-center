@@ -12,7 +12,7 @@ protocol MainViewModelable: MainViewModelInput, MainViewModelOutput {}
 
 protocol MainViewModelInput {
     func fetchFirstPage()
-    func fetchNextPage()
+    func fetchNextPage(indexPath: Int?)
 }
 
 protocol MainViewModelOutput{
@@ -25,8 +25,7 @@ final class MainViewModel: MainViewModelable {
     private let disposeBag = DisposeBag()
     private var currentPage = 1
     private let errorRelay = PublishRelay<Error>()
-    private let centerListRelay = PublishRelay<[CenterInformation]>()
-    private var previousCenterListResult: [CenterInformation] = []
+    private let centerListRelay = BehaviorRelay<[CenterInformation]>(value: [])
 
     init(useCase: CovidCenterListSearchUseCaseProtocol) {
         self.useCase = useCase
@@ -36,8 +35,7 @@ final class MainViewModel: MainViewModelable {
         self.useCase.fetchCenterList(pageNumber: self.currentPage, perPages: 10)
             .withUnretained(self)
             .subscribe(onNext: { viewModel, centerList in
-                viewModel.centerListRelay.accept(viewModel.previousCenterListResult + centerList.data)
-                viewModel.previousCenterListResult.append(contentsOf: centerList.data)
+                viewModel.centerListRelay.accept(viewModel.centerListRelay.value + centerList.data)
             }, onError: { [weak self] error in
                 self?.errorRelay.accept(error)
             })
@@ -48,11 +46,15 @@ final class MainViewModel: MainViewModelable {
 
     func fetchFirstPage() {
         self.currentPage = 1
-        self.previousCenterListResult = []
+        self.centerListRelay.accept([])
         self.fetchCenterList()
     }
 
-    func fetchNextPage() {
+    func fetchNextPage(indexPath: Int?) {
+        guard indexPath == self.centerListRelay.value.count - 1 else {
+            return
+        }
+
         self.currentPage += 1
         self.fetchCenterList()
     }

@@ -97,5 +97,11 @@ final class MainViewController: UIViewController {
                 return cell
             }
             .disposed(by: self.disposeBag)
+
+        self.tableView.rx.prefetchRows
+            .bind(onNext: { [weak self] indexPath in
+                self?.viewModel.fetchNextPage(indexPath: indexPath.last?.row)
+            })
+            .disposed(by: self.disposeBag)
     }
 }
