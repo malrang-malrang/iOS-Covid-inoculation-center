@@ -12,16 +12,19 @@ final class Endpoint: Requestable {
     var path: String
     var method: HttpMethod
     var queryParameters: Encodable?
+    var serviceKey: String?
 
     init(
         host: String,
         path: String = "",
         method: HttpMethod = .get,
-        queryParameters: Encodable? = nil
+        queryParameters: Encodable? = nil,
+        serviceKey: String? = nil
     ) {
         self.host = host
         self.path = path
         self.method = method
         self.queryParameters = queryParameters
+        self.serviceKey = serviceKey
     }
 }

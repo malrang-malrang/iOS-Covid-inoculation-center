@@ -10,7 +10,4 @@ import Foundation
 struct CenterRequest: Encodable {
     let pageNumber: Int
     let perPages: Int
-    var serviceKey: String {
-        return Bundle.main.apiKey
-    }
 }

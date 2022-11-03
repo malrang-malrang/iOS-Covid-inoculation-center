@@ -27,13 +27,17 @@ extension EndPointStrage {
 
 extension EndPointStrage {
     private func fetchCenterList(pageNumber: Int, perPages: Int) -> Endpoint {
-        let queryParameter = CenterRequest(pageNumber: pageNumber, perPages: perPages)
+        let queryParameter = CenterRequest(
+            pageNumber: pageNumber,
+            perPages: perPages
+        )
 
         let endpoint = Endpoint(
             host: Const.baseURL,
             path: Const.basePath,
             method: .get,
-            queryParameters: queryParameter
+            queryParameters: queryParameter,
+            serviceKey: Bundle.main.apiKey
         )
 
         return endpoint

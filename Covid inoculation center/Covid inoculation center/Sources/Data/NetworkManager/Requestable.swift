@@ -12,6 +12,7 @@ protocol Requestable {
     var path: String { get }
     var method: HttpMethod { get }
     var queryParameters: Encodable? { get }
+    var serviceKey: String? { get }
 }
 
 extension Requestable {
@@ -39,7 +40,7 @@ extension Requestable {
 
         switch self.generateQueryItems(at: self.queryParameters) {
         case .success(let queryItems):
-            urlComponent.queryItems = queryItems
+            urlComponent.percentEncodedQueryItems = queryItems
         case .failure(let error):
             return .failure(error)
         }
@@ -68,7 +69,21 @@ extension Requestable {
             return .failure(error)
         }
 
+        if let serviceKey = self.serviceKey {
+            let serviceKeyQuery = serviceKey.toEncodeQuery()
+            let serviceKeyQueryItem = URLQueryItem(name: "serviceKey", value: serviceKeyQuery)
+            print(serviceKeyQueryItem)
+            urlQueryItems.append(serviceKeyQueryItem)
+        }
+
         return .success(urlQueryItems)
     }
 }
 
+private extension String {
+    func toEncodeQuery() -> String {
+        return self
+            .replacingOccurrences(of: "/", with: "%2F")
+            .replacingOccurrences(of: "+", with: "%2B")
+    }
+}
