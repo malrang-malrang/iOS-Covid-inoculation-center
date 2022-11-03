@@ -72,7 +72,6 @@ extension Requestable {
         if let serviceKey = self.serviceKey {
             let serviceKeyQuery = serviceKey.toEncodeQuery()
             let serviceKeyQueryItem = URLQueryItem(name: "serviceKey", value: serviceKeyQuery)
-            print(serviceKeyQueryItem)
             urlQueryItems.append(serviceKeyQueryItem)
         }
 

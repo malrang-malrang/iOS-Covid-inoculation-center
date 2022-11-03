@@ -11,21 +11,19 @@ import RxRelay
 protocol MainViewModelable: MainViewModelInput, MainViewModelOutput {}
 
 protocol MainViewModelInput {
-    func fetchCenterList()
+    func fetchFirstPage()
     func fetchNextPage()
 }
 
 protocol MainViewModelOutput{
     var error: Observable<Error> { get }
-    var isLoading: Observable<Bool> { get }
     var centerList: Observable<[CenterInformation]> { get }
 }
 
 final class MainViewModel: MainViewModelable {
     private let useCase: CovidCenterListSearchUseCaseProtocol
     private let disposeBag = DisposeBag()
-    private var currentPage = 0
-    private let isLoadingRelay = PublishRelay<Bool>()
+    private var currentPage = 1
     private let errorRelay = PublishRelay<Error>()
     private let centerListRelay = PublishRelay<[CenterInformation]>()
     private var previousCenterListResult: [CenterInformation] = []
@@ -34,10 +32,7 @@ final class MainViewModel: MainViewModelable {
         self.useCase = useCase
     }
 
-    // MARK: - Input
-
-    func fetchCenterList() {
-        self.isLoadingRelay.accept(true)
+    private func fetchCenterList() {
         self.useCase.fetchCenterList(pageNumber: self.currentPage, perPages: 10)
             .withUnretained(self)
             .subscribe(onNext: { viewModel, centerList in
@@ -45,10 +40,16 @@ final class MainViewModel: MainViewModelable {
                 viewModel.previousCenterListResult.append(contentsOf: centerList.data)
             }, onError: { [weak self] error in
                 self?.errorRelay.accept(error)
-            }, onCompleted: {
-                self.isLoadingRelay.accept(false)
             })
             .disposed(by: self.disposeBag)
+    }
+
+    // MARK: - Input
+
+    func fetchFirstPage() {
+        self.currentPage = 1
+        self.previousCenterListResult = []
+        self.fetchCenterList()
     }
 
     func fetchNextPage() {
@@ -60,10 +61,6 @@ final class MainViewModel: MainViewModelable {
 
     var error: Observable<Error> {
         return self.errorRelay.asObservable()
-    }
-
-    var isLoading: Observable<Bool> {
-        return self.isLoadingRelay.asObservable()
     }
 
     var centerList: Observable<[CenterInformation]> {

@@ -16,12 +16,15 @@ private enum Const {
 }
 
 final class MainViewController: UIViewController {
+//    private let refreshControl = UIRefreshControl()
     private let coordinator: MainViewCoordinatorProtocol
     private let disposeBag = DisposeBag()
     private let viewModel: MainViewModelable
 
     private let tableView: UITableView = {
         let tableView = UITableView()
+        let refreshControl = UIRefreshControl()
+        tableView.refreshControl = refreshControl
         tableView.register(
             CenterInformationCell.self,
             forCellReuseIdentifier: CenterInformationCell.identifier
@@ -45,7 +48,7 @@ final class MainViewController: UIViewController {
         self.setupView()
         self.setupConstraint()
         self.bind()
-        self.viewModel.fetchCenterList()
+        self.viewModel.fetchFirstPage()
     }
 
     private func setupNavigationItem() {
@@ -71,10 +74,11 @@ final class MainViewController: UIViewController {
             }
             .disposed(by: self.disposeBag)
 
-        self.viewModel.isLoading
-            .bind { [weak self] isLoading in
-
-            }
+        self.tableView.refreshControl?.rx.controlEvent(.valueChanged)
+            .bind(onNext: { [weak self] _ in
+                self?.viewModel.fetchFirstPage()
+                self?.tableView.refreshControl?.endRefreshing()
+            })
             .disposed(by: self.disposeBag)
 
         self.viewModel.centerList
