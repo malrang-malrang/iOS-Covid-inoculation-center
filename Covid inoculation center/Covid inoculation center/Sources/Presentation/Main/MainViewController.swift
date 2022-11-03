@@ -18,7 +18,7 @@ private enum Const {
 final class MainViewController: UIViewController {
     private let coordinator: MainViewCoordinatorProtocol
     private let disposeBag = DisposeBag()
-    private let viewModel: CenterListViewModelable
+    private let viewModel: MainViewModelable
 
     private let tableView: UITableView = {
         let tableView = UITableView()
@@ -29,7 +29,7 @@ final class MainViewController: UIViewController {
         return tableView
     }()
 
-    init(coordinator: MainViewCoordinatorProtocol, viewModel: CenterListViewModelable) {
+    init(coordinator: MainViewCoordinatorProtocol, viewModel: MainViewModelable) {
         self.coordinator = coordinator
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -67,7 +67,7 @@ final class MainViewController: UIViewController {
     private func bind() {
         self.viewModel.error
             .bind { [weak self] error in
-                
+
             }
             .disposed(by: self.disposeBag)
 

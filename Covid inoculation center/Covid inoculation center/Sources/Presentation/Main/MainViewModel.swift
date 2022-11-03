@@ -1,5 +1,5 @@
 //
-//  CenterListViewModel.swift
+//  MainViewModel.swift
 //  Covid inoculation center
 //
 //  Created by 김동욱 on 2022/11/03.
@@ -8,20 +8,20 @@
 import RxSwift
 import RxRelay
 
-protocol CenterListViewModelable: CenterListViewModelInput, CenterListViewModelOutput {}
+protocol MainViewModelable: MainViewModelInput, MainViewModelOutput {}
 
-protocol CenterListViewModelInput {
+protocol MainViewModelInput {
     func fetchCenterList()
     func fetchNextPage()
 }
 
-protocol CenterListViewModelOutput{
+protocol MainViewModelOutput{
     var error: Observable<Error> { get }
     var isLoading: Observable<Bool> { get }
     var centerList: Observable<[CenterInformation]> { get }
 }
 
-final class CenterListViewModel: CenterListViewModelable {
+final class MainViewModel: MainViewModelable {
     private let useCase: CovidCenterListSearchUseCaseProtocol
     private let disposeBag = DisposeBag()
     private var currentPage = 0
