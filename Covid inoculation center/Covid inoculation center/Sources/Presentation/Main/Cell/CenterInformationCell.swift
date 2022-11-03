@@ -15,6 +15,10 @@ private enum Const {
 }
 
 final class CenterInformationCell: UITableViewCell {
+    static var identifier: String {
+        return String(describing: Self.self)
+    }
+    
     private let placeHolderStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
@@ -26,7 +30,7 @@ final class CenterInformationCell: UITableViewCell {
     private let centerNamePlaceHolderLabel: UILabel = {
         let label = UILabel()
         label.text = Const.centerName
-        label.textColor = .systemGray3
+        label.textColor = .systemGray2
 
         return label
     }()
@@ -34,7 +38,7 @@ final class CenterInformationCell: UITableViewCell {
     private let facilityNamePlaceHolderLabel: UILabel = {
         let label = UILabel()
         label.text = Const.facilityName
-        label.textColor = .systemGray3
+        label.textColor = .systemGray2
 
         return label
     }()
@@ -42,7 +46,7 @@ final class CenterInformationCell: UITableViewCell {
     private let addressPlaceHolderLabel: UILabel = {
         let label = UILabel()
         label.text = Const.address
-        label.textColor = .systemGray3
+        label.textColor = .systemGray2
 
         return label
     }()
@@ -50,7 +54,7 @@ final class CenterInformationCell: UITableViewCell {
     private let updateAtPlaceHolderLabel: UILabel = {
         let label = UILabel()
         label.text = Const.updateAt
-        label.textColor = .systemGray3
+        label.textColor = .systemGray2
 
         return label
     }()
@@ -63,29 +67,10 @@ final class CenterInformationCell: UITableViewCell {
         return stackView
     }()
 
-    private let centerNameLabel: UILabel = {
-        let label = UILabel()
-
-        return label
-    }()
-
-    private let facilityNameLabel: UILabel = {
-        let label = UILabel()
-
-        return label
-    }()
-
-    private let addressLabel: UILabel = {
-        let label = UILabel()
-
-        return label
-    }()
-
-    private let updateAtLabel: UILabel = {
-        let label = UILabel()
-
-        return label
-    }()
+    private let centerNameLabel = UILabel()
+    private let facilityNameLabel = UILabel()
+    private let addressLabel = UILabel()
+    private let updateAtLabel = UILabel()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -117,20 +102,13 @@ final class CenterInformationCell: UITableViewCell {
     private func setupConstraint() {
         self.placeHolderStackView.snp.makeConstraints {
             $0.top.leading.bottom.equalToSuperview().inset(10)
+            $0.width.equalToSuperview().multipliedBy(0.3)
         }
 
         self.informationStackView.snp.makeConstraints {
             $0.top.trailing.bottom.equalToSuperview().inset(10)
             $0.leading.equalTo(self.placeHolderStackView.snp.trailing)
         }
-    }
-
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        self.centerNameLabel.text = nil
-        self.facilityNameLabel.text = nil
-        self.addressLabel.text = nil
-        self.updateAtLabel.text = nil
     }
 
     func bind(viewModel: CenterInformationCellViewModelable) {
