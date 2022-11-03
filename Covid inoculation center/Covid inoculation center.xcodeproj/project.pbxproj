@@ -46,6 +46,7 @@
 		30BE2450291407EC00EBE741 /* AlertBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BE244F291407EC00EBE741 /* AlertBuilder.swift */; };
 		30BE24522914088000EBE741 /* Error+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BE24512914088000EBE741 /* Error+Sugar.swift */; };
 		30BE245429140D5500EBE741 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BE245329140D5500EBE741 /* Formatter.swift */; };
+		30BE245629141D8900EBE741 /* String+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BE245529141D8900EBE741 /* String+Sugar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 		30BE244F291407EC00EBE741 /* AlertBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBuilder.swift; sourceTree = "<group>"; };
 		30BE24512914088000EBE741 /* Error+Sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Sugar.swift"; sourceTree = "<group>"; };
 		30BE245329140D5500EBE741 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		30BE245529141D8900EBE741 /* String+Sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Sugar.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 				3001BC6429124D880069C2FD /* Bundle+Sugar.swift */,
 				3001BC522912452A0069C2FD /* Encodable+Sugar.swift */,
 				30BE24512914088000EBE741 /* Error+Sugar.swift */,
+				30BE245529141D8900EBE741 /* String+Sugar.swift */,
 				30BE24472913980C00EBE741 /* UIView+Sugar.swift */,
 				30BE24492913981500EBE741 /* UIStackView+Sugar.swift */,
 			);
@@ -516,6 +519,7 @@
 				3001BC6A291253160069C2FD /* CovidCinoculationCenterRepository.swift in Sources */,
 				3001BC8329126C380069C2FD /* CovidCenterListSearchUseCase.swift in Sources */,
 				3001BC582912463F0069C2FD /* Endpoint.swift in Sources */,
+				30BE245629141D8900EBE741 /* String+Sugar.swift in Sources */,
 				30BE245429140D5500EBE741 /* Formatter.swift in Sources */,
 				3001BC67291252040069C2FD /* NetworkManager.swift in Sources */,
 				3001BC50291244D70069C2FD /* Requestable.swift in Sources */,
