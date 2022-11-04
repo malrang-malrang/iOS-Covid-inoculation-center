@@ -7,9 +7,7 @@
 
 import UIKit
 
-protocol DetailViewCoordinatorProtocol {
-    func popDetailView()
-}
+protocol DetailViewCoordinatorProtocol {}
 
 final class DetailViewCoordinator: Coordinator, DetailViewCoordinatorProtocol {
     var navigationController: UINavigationController
@@ -28,13 +26,9 @@ final class DetailViewCoordinator: Coordinator, DetailViewCoordinatorProtocol {
         self.covidCenterListSearchUseCase = covidCenterListSearchUseCase
     }
 
-    func start() {
-        let detailView = DetailViewController(coordinator: self)
+    func start(centerInformation: CenterInformation) {
+        let detailViewModel = DetailViewModel(centerInformation: centerInformation)
+        let detailView = DetailViewController(coordinator: self, viewModel: detailViewModel)
         self.navigationController.pushViewController(detailView, animated: true)
-    }
-
-    func popDetailView() {
-        self.navigationController.popViewController(animated: true)
-        self.parentCoordinators?.removeChild(self)
     }
 }

@@ -31,6 +31,9 @@
 		301477B92914311A0062BB69 /* DetailViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301477B82914311A0062BB69 /* DetailViewCoordinator.swift */; };
 		301477BB2914313D0062BB69 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301477BA2914313D0062BB69 /* Image.swift */; };
 		301477BD291432730062BB69 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301477BC291432730062BB69 /* DetailViewController.swift */; };
+		301477BF2914E8970062BB69 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301477BE2914E8970062BB69 /* SectionView.swift */; };
+		301477C12914EE090062BB69 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301477C02914EE090062BB69 /* DetailViewModel.swift */; };
+		301477C429151A570062BB69 /* DetailContentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301477C329151A570062BB69 /* DetailContentsView.swift */; };
 		304D15F629123F2F000C47CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304D15F529123F2F000C47CC /* AppDelegate.swift */; };
 		304D15F829123F2F000C47CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304D15F729123F2F000C47CC /* SceneDelegate.swift */; };
 		304D15FF29123F30000C47CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 304D15FE29123F30000C47CC /* Assets.xcassets */; };
@@ -95,6 +98,9 @@
 		301477B82914311A0062BB69 /* DetailViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewCoordinator.swift; sourceTree = "<group>"; };
 		301477BA2914313D0062BB69 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		301477BC291432730062BB69 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		301477BE2914E8970062BB69 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
+		301477C02914EE090062BB69 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		301477C329151A570062BB69 /* DetailContentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContentsView.swift; sourceTree = "<group>"; };
 		304D15F229123F2F000C47CC /* Covid inoculation center.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Covid inoculation center.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		304D15F529123F2F000C47CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		304D15F729123F2F000C47CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -253,6 +259,15 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		301477C229151A410062BB69 /* ContentsView */ = {
+			isa = PBXGroup;
+			children = (
+				301477BE2914E8970062BB69 /* SectionView.swift */,
+				301477C329151A570062BB69 /* DetailContentsView.swift */,
+			);
+			path = ContentsView;
+			sourceTree = "<group>";
+		};
 		304D15E929123F2F000C47CC = {
 			isa = PBXGroup;
 			children = (
@@ -401,6 +416,8 @@
 			isa = PBXGroup;
 			children = (
 				301477BC291432730062BB69 /* DetailViewController.swift */,
+				301477C02914EE090062BB69 /* DetailViewModel.swift */,
+				301477C229151A410062BB69 /* ContentsView */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -553,12 +570,14 @@
 				30BE24522914088000EBE741 /* Error+Sugar.swift in Sources */,
 				3001BC85291275130069C2FD /* MainViewCoordinator.swift in Sources */,
 				3001BC8129126B3F0069C2FD /* AppCoordinator.swift in Sources */,
+				301477BF2914E8970062BB69 /* SectionView.swift in Sources */,
 				301477B92914311A0062BB69 /* DetailViewCoordinator.swift in Sources */,
 				3001BC6A291253160069C2FD /* CovidCinoculationCenterRepository.swift in Sources */,
 				301477BB2914313D0062BB69 /* Image.swift in Sources */,
 				3001BC8329126C380069C2FD /* CovidCenterListSearchUseCase.swift in Sources */,
 				3001BC582912463F0069C2FD /* Endpoint.swift in Sources */,
 				30BE245629141D8900EBE741 /* String+Sugar.swift in Sources */,
+				301477C429151A570062BB69 /* DetailContentsView.swift in Sources */,
 				30BE245429140D5500EBE741 /* Formatter.swift in Sources */,
 				3001BC67291252040069C2FD /* NetworkManager.swift in Sources */,
 				3001BC50291244D70069C2FD /* Requestable.swift in Sources */,
@@ -567,6 +586,7 @@
 				304D15F629123F2F000C47CC /* AppDelegate.swift in Sources */,
 				3001BC6E2912542C0069C2FD /* CovidInoculationCenterRepositoryProtocol.swift in Sources */,
 				3001BC5A291246790069C2FD /* EndpointStrage.swift in Sources */,
+				301477C12914EE090062BB69 /* DetailViewModel.swift in Sources */,
 				3001BC4E291244820069C2FD /* NetworkError.swift in Sources */,
 				30BE24482913980C00EBE741 /* UIView+Sugar.swift in Sources */,
 				30BE2450291407EC00EBE741 /* AlertBuilder.swift in Sources */,

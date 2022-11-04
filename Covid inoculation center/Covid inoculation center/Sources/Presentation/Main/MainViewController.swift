@@ -13,6 +13,7 @@ import SnapKit
 
 private enum Const {
     static let navigationTitle = "예방접종센터 리스트"
+    static let emptyString = ""
 }
 
 final class MainViewController: UIViewController {
@@ -52,6 +53,13 @@ final class MainViewController: UIViewController {
     }
 
     private func setupNavigationItem() {
+        let backButton = UIBarButtonItem(
+            title: Const.emptyString,
+            style: .plain,
+            target: self,
+            action: nil
+        )
+        self.navigationItem.backBarButtonItem = backButton
         self.navigationItem.title = Const.navigationTitle
     }
 
@@ -120,7 +128,7 @@ final class MainViewController: UIViewController {
 
         self.tableView.rx.modelSelected(CenterInformation.self)
             .bind(onNext: { [weak self] centerInformation in
-                self?.coordinator.showDetailView()
+                self?.coordinator.showDetailView(centerInformation: centerInformation)
             })
             .disposed(by: self.disposeBag)
     }
