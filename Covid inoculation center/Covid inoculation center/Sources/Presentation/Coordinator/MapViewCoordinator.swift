@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol MapViewCoordinatorProtocol {}
+protocol MapViewCoordinatorProtocol: Alertable {}
 
 final class MapViewCoordinator: Coordinator, MapViewCoordinatorProtocol {
     var navigationController: UINavigationController
@@ -26,8 +26,8 @@ final class MapViewCoordinator: Coordinator, MapViewCoordinatorProtocol {
         self.covidCenterListSearchUseCase = covidCenterListSearchUseCase
     }
 
-    func start(latitude: Int?, longitude: Int?, centerName: String?) {
-        let viewModel = MapViewModel()
+    func start(latitude: String?, longitude: String?, centerName: String?) {
+        let viewModel = MapViewModel(latitude: latitude, longitude: longitude, centerName: centerName)
         let mapView = MapViewController(coordinator: self, viewModel: viewModel)
         self.navigationController.pushViewController(mapView, animated: true)
     }

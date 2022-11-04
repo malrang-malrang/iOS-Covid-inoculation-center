@@ -72,8 +72,8 @@ final class DetailViewController: UIViewController {
         self.mapBarButton.rx.tap
             .bind(onNext: { [weak self] _ in
                 self?.coordinator.showMapView(
-                    latitude: 0,
-                    longitude: 0,
+                    latitude: self?.viewModel.latitude,
+                    longitude: self?.viewModel.longitude,
                     centerName: self?.viewModel.centerName
                 )
             })

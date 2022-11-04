@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 protocol Coordinator: AnyObject {
     var navigationController: UINavigationController { get }
@@ -23,6 +24,7 @@ final class AppCoordinator: Coordinator {
     var navigationController: UINavigationController
     var parentCoordinators: Coordinator?
     var childCoordinators: [Coordinator] = []
+    var locationManager = CLLocationManager()
     private let covidCenterListSearchUseCase = CovidCenterListSearchUseCase(
         covidInoculationCenterRepository: CovidInoculationCenterRepository()
     )

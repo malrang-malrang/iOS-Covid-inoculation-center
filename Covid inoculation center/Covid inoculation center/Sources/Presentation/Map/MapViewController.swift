@@ -16,6 +16,7 @@ private enum Const {
     static let toCurrentLocation = "현재위치로"
     static let toInoculationCenter = "접종센터로"
     static let map = "지도"
+    static let back = "Back"
 }
 
 final class MapViewController: UIViewController, CLLocationManagerDelegate {
@@ -55,14 +56,19 @@ final class MapViewController: UIViewController, CLLocationManagerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupNavigationItem()
         self.setupView()
         self.setupConstraint()
         self.bind()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        self.viewModel.locationRegistration(location: self.locationManager.location)
+    }
+
     private func setupNavigationItem() {
         self.navigationItem.title = Const.map
-        self.navigationItem.backButtonTitle = "Back"
+        self.navigationItem.backButtonTitle = Const.back
     }
 
     private func setupView() {
@@ -96,15 +102,51 @@ final class MapViewController: UIViewController, CLLocationManagerDelegate {
     }
 
     private func bind() {
+        self.viewModel.error
+            .bind(onNext: { [weak self] error in
+                self?.coordinator.showErrorAlert(
+                    title: error.identifier,
+                    message: error.errorMessage
+                )
+            })
+            .disposed(by: self.disposeBag)
+
+        self.viewModel.moveToCurrentLocation
+            .withUnretained(self)
+            .bind(onNext: { view, location in
+                view.mapView.moveLocation(location: location)
+            })
+            .disposed(by: self.disposeBag)
+
+        self.viewModel.moveToCenterLocation
+            .withUnretained(self)
+            .bind(onNext: { view, information in
+                view.mapView.moveLocation(location: information.0)
+                view.mapView.setLocationPin(location: information.0, title: information.1)
+            })
+            .disposed(by: self.disposeBag)
+
+        self.viewModel.requestLocationAuthority
+            .withUnretained(self)
+            .bind(onNext: { view, _ in
+                view.locationManager.requestWhenInUseAuthorization()
+                view.viewModel.locationRegistration(location: view.locationManager.location)
+            })
+            .disposed(by: self.disposeBag)
+
         self.toInoculationCenterButton.rx.tap
-            .bind(onNext: { [weak self] _ in
-                
+            .withUnretained(self)
+            .bind(onNext: { view, _ in
+                view.viewModel.didTapToInoculationCenterButton()
             })
             .disposed(by: self.disposeBag)
 
         self.toCurrentLocationButton.rx.tap
-            .bind(onNext: { [weak self] _ in
-
+            .withUnretained(self)
+            .bind(onNext: { view, _ in
+                view.viewModel.didTapToCurrentLocationButton(
+                    authorization: view.locationManager.authorizationStatus
+                )
             })
             .disposed(by: self.disposeBag)
     }

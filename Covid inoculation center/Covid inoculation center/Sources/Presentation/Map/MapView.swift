@@ -11,8 +11,6 @@ final class MapView: MKMapView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.setupView()
-//        self.moveLocation(location: <#T##CLLocationCoordinate2D#>)
-//        self.setLocationPin(location: <#T##CLLocationCoordinate2D#>, title: <#T##String#>)
     }
 
     required init?(coder: NSCoder) {

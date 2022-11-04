@@ -38,6 +38,7 @@
 		301477C9291530F10062BB69 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301477C8291530F10062BB69 /* MapViewController.swift */; };
 		301477CB291557A50062BB69 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301477CA291557A50062BB69 /* MapView.swift */; };
 		301477CD29155DFA0062BB69 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301477CC29155DFA0062BB69 /* MapViewModel.swift */; };
+		301477D0291569380062BB69 /* LocationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301477CF291569380062BB69 /* LocationError.swift */; };
 		304D15F629123F2F000C47CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304D15F529123F2F000C47CC /* AppDelegate.swift */; };
 		304D15F829123F2F000C47CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304D15F729123F2F000C47CC /* SceneDelegate.swift */; };
 		304D15FF29123F30000C47CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 304D15FE29123F30000C47CC /* Assets.xcassets */; };
@@ -109,6 +110,7 @@
 		301477C8291530F10062BB69 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		301477CA291557A50062BB69 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		301477CC29155DFA0062BB69 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		301477CF291569380062BB69 /* LocationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationError.swift; sourceTree = "<group>"; };
 		304D15F229123F2F000C47CC /* Covid inoculation center.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Covid inoculation center.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		304D15F529123F2F000C47CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		304D15F729123F2F000C47CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -287,6 +289,14 @@
 			path = Map;
 			sourceTree = "<group>";
 		};
+		301477CE291569230062BB69 /* InputError */ = {
+			isa = PBXGroup;
+			children = (
+				301477CF291569380062BB69 /* LocationError.swift */,
+			);
+			path = InputError;
+			sourceTree = "<group>";
+		};
 		304D15E929123F2F000C47CC = {
 			isa = PBXGroup;
 			children = (
@@ -388,6 +398,7 @@
 		304D1637291241E0000C47CC /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				301477CE291569230062BB69 /* InputError */,
 				30BE24572914247700EBE741 /* Component */,
 				3001BC7F29126B290069C2FD /* Coordinator */,
 				3001BC7E29126B1D0069C2FD /* Main */,
@@ -601,6 +612,7 @@
 				3001BC582912463F0069C2FD /* Endpoint.swift in Sources */,
 				30BE245629141D8900EBE741 /* String+Sugar.swift in Sources */,
 				301477C429151A570062BB69 /* DetailContentsView.swift in Sources */,
+				301477D0291569380062BB69 /* LocationError.swift in Sources */,
 				30BE245429140D5500EBE741 /* Formatter.swift in Sources */,
 				3001BC67291252040069C2FD /* NetworkManager.swift in Sources */,
 				3001BC50291244D70069C2FD /* Requestable.swift in Sources */,

@@ -8,7 +8,7 @@
 import UIKit
 
 protocol DetailViewCoordinatorProtocol {
-    func showMapView(latitude: Int?, longitude: Int?, centerName: String?)
+    func showMapView(latitude: String?, longitude: String?, centerName: String?)
 }
 
 final class DetailViewCoordinator: Coordinator, DetailViewCoordinatorProtocol {
@@ -34,13 +34,12 @@ final class DetailViewCoordinator: Coordinator, DetailViewCoordinatorProtocol {
         self.navigationController.pushViewController(detailView, animated: true)
     }
 
-    func showMapView(latitude: Int?, longitude: Int?, centerName: String?) {
+    func showMapView(latitude: String?, longitude: String?, centerName: String?) {
         let mapViewCoordinator = MapViewCoordinator(
             navigationController: self.navigationController,
             parentCoordinators: self,
             covidCenterListSearchUseCase: self.covidCenterListSearchUseCase
         )
-        self.childCoordinators.append(mapViewCoordinator)
         mapViewCoordinator.start(latitude: latitude, longitude: longitude, centerName: centerName)
     }
 }

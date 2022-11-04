@@ -40,7 +40,6 @@ final class MainViewCoordinator: Coordinator, MainViewCoordinatorProtocol {
             parentCoordinators: self,
             covidCenterListSearchUseCase: self.covidCenterListSearchUseCase
         )
-        self.childCoordinators.append(detailCoordinaor)
         detailCoordinaor.start(centerInformation: centerInformation)
     }
 }

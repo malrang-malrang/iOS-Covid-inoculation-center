@@ -19,6 +19,8 @@ protocol DetailViewModelOutput {
     var phoneNumber: String { get }
     var updatedAt: String { get }
     var address: String { get }
+    var latitude: String { get }
+    var longitude: String { get }
 }
 
 final class DetailViewModel: DetailViewModelable {
@@ -48,5 +50,13 @@ final class DetailViewModel: DetailViewModelable {
 
     var address: String {
         return self.centerInformation.address ?? Const.unknown
+    }
+
+    var latitude: String {
+        return self.centerInformation.lat ?? Const.unknown
+    }
+
+    var longitude: String {
+        return self.centerInformation.lng ?? Const.unknown
     }
 }
