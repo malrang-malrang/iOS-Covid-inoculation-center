@@ -28,6 +28,7 @@
 		3001BC8329126C380069C2FD /* CovidCenterListSearchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001BC8229126C380069C2FD /* CovidCenterListSearchUseCase.swift */; };
 		3001BC85291275130069C2FD /* MainViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001BC84291275130069C2FD /* MainViewCoordinator.swift */; };
 		3001BC872912765A0069C2FD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001BC862912765A0069C2FD /* MainViewController.swift */; };
+		301477BB2914313D0062BB69 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301477BA2914313D0062BB69 /* Image.swift */; };
 		304D15F629123F2F000C47CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304D15F529123F2F000C47CC /* AppDelegate.swift */; };
 		304D15F829123F2F000C47CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304D15F729123F2F000C47CC /* SceneDelegate.swift */; };
 		304D15FF29123F30000C47CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 304D15FE29123F30000C47CC /* Assets.xcassets */; };
@@ -47,7 +48,7 @@
 		30BE24522914088000EBE741 /* Error+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BE24512914088000EBE741 /* Error+Sugar.swift */; };
 		30BE245429140D5500EBE741 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BE245329140D5500EBE741 /* Formatter.swift */; };
 		30BE245629141D8900EBE741 /* String+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BE245529141D8900EBE741 /* String+Sugar.swift */; };
-		30BE24592914248D00EBE741 /* ScrollToTopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BE24582914248D00EBE741 /* ScrollToTopButton.swift */; };
+		30BE24592914248D00EBE741 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BE24582914248D00EBE741 /* CircleButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		3001BC8229126C380069C2FD /* CovidCenterListSearchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidCenterListSearchUseCase.swift; sourceTree = "<group>"; };
 		3001BC84291275130069C2FD /* MainViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCoordinator.swift; sourceTree = "<group>"; };
 		3001BC862912765A0069C2FD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		301477BA2914313D0062BB69 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		304D15F229123F2F000C47CC /* Covid inoculation center.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Covid inoculation center.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		304D15F529123F2F000C47CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		304D15F729123F2F000C47CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,7 +111,7 @@
 		30BE24512914088000EBE741 /* Error+Sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Sugar.swift"; sourceTree = "<group>"; };
 		30BE245329140D5500EBE741 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		30BE245529141D8900EBE741 /* String+Sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Sugar.swift"; sourceTree = "<group>"; };
-		30BE24582914248D00EBE741 /* ScrollToTopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollToTopButton.swift; sourceTree = "<group>"; };
+		30BE24582914248D00EBE741 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -376,7 +378,7 @@
 		30BE24572914247700EBE741 /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				30BE24582914248D00EBE741 /* ScrollToTopButton.swift */,
+				30BE24582914248D00EBE741 /* CircleButton.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -384,6 +386,7 @@
 		30BE245A2914294700EBE741 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				301477BA2914313D0062BB69 /* Image.swift */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -536,6 +539,7 @@
 				3001BC85291275130069C2FD /* MainViewCoordinator.swift in Sources */,
 				3001BC8129126B3F0069C2FD /* AppCoordinator.swift in Sources */,
 				3001BC6A291253160069C2FD /* CovidCinoculationCenterRepository.swift in Sources */,
+				301477BB2914313D0062BB69 /* Image.swift in Sources */,
 				3001BC8329126C380069C2FD /* CovidCenterListSearchUseCase.swift in Sources */,
 				3001BC582912463F0069C2FD /* Endpoint.swift in Sources */,
 				30BE245629141D8900EBE741 /* String+Sugar.swift in Sources */,
@@ -557,7 +561,7 @@
 				3001BC4C291244200069C2FD /* HTTPMethod.swift in Sources */,
 				30BE244E29139A8200EBE741 /* MainViewModel.swift in Sources */,
 				3001BC872912765A0069C2FD /* MainViewController.swift in Sources */,
-				30BE24592914248D00EBE741 /* ScrollToTopButton.swift in Sources */,
+				30BE24592914248D00EBE741 /* CircleButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

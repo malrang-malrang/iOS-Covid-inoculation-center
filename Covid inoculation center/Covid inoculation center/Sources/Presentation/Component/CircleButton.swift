@@ -1,5 +1,5 @@
 //
-//  ScrollToTopButton.swift
+//  CircleButton.swift
 //  Covid inoculation center
 //
 //  Created by 김동욱 on 2022/11/04.
@@ -7,20 +7,16 @@
 
 import UIKit
 
-private enum Image {
-    static let topAlignment = UIImage(named: "top-alignment")
-}
-
-final class ScrollToTopButton: UIButton {
+final class CircleButton: UIButton {
     override var isHighlighted: Bool {
         didSet {
             self.didTapButtonAnimation()
         }
     }
 
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        self.setupButton()
+    init(image: UIImage?) {
+        super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+        self.setupButton(image: image)
     }
 
     required init?(coder: NSCoder) {
@@ -32,9 +28,9 @@ final class ScrollToTopButton: UIButton {
         self.layer.cornerRadius = self.frame.height / 2
       }
 
-    private func setupButton() {
+    private func setupButton(image: UIImage?) {
         self.backgroundColor = .systemBackground
-        self.setImage(Image.topAlignment, for: .normal)
+        self.setImage(image, for: .normal)
         self.imageEdgeInsets = UIEdgeInsets(top: 10.0, left: 10.0, bottom: 10.0, right: 10.0)
         self.layer.shadowOffset = CGSize(width: 3, height: 3)
         self.layer.shadowOpacity = 0.3

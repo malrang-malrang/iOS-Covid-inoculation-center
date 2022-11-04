@@ -19,7 +19,7 @@ final class MainViewController: UIViewController {
     private let coordinator: MainViewCoordinatorProtocol
     private let disposeBag = DisposeBag()
     private let viewModel: MainViewModelable
-    private let scrollToTopButton = ScrollToTopButton()
+    private let scrollToTopButton = CircleButton(image: Image.topAlignment)
 
     private let tableView: UITableView = {
         let tableView = UITableView()
