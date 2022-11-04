@@ -62,10 +62,6 @@ final class SectionView: UIView {
     }
 
     private func setupView() {
-//        self.axis = .vertical
-//        self.alignment = .center
-//        self.distribution = .equalSpacing
-//        self.spacing = 1
         self.backgroundColor = .white
         self.layer.shadowOffset = CGSize(width: 3, height: 3)
         self.layer.shadowOpacity = 0.3
@@ -101,4 +97,3 @@ final class SectionView: UIView {
         self.informationLabel.text = information
     }
 }
-

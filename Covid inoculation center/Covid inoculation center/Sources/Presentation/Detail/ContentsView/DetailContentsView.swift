@@ -17,9 +17,6 @@ private enum Const {
 
 
 final class DetailContentsView: UIView {
-    private let coordinator: DetailViewCoordinatorProtocol
-    private let viewModel: DetailViewModelable
-
     private let centerNameSectionView = SectionView(
         image: Image.hospital,
         title: Const.centerName
@@ -46,13 +43,10 @@ final class DetailContentsView: UIView {
     )
 
 
-    init(coordinator: DetailViewCoordinatorProtocol, viewModel: DetailViewModelable) {
-        self.coordinator = coordinator
-        self.viewModel = viewModel
+    init() {
         super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         self.setupView()
         self.setupConstraint()
-        self.bind()
     }
 
     required init?(coder: NSCoder) {
@@ -107,11 +101,17 @@ final class DetailContentsView: UIView {
         }
     }
 
-    private func bind() {
-        self.centerNameSectionView.bind(information: self.viewModel.centerName)
-        self.facilityNameSectionView.bind(information: self.viewModel.facilityName)
-        self.phoneNumberSectionView.bind(information: self.viewModel.phoneNumber)
-        self.updateAtSectionView.bind(information: self.viewModel.updatedAt)
-        self.addressSectionView.bind(information: self.viewModel.address)
+    func bind(
+        centerName: String,
+        facilityName: String,
+        phoneNumber: String,
+        updatedAt: String,
+        address: String
+    ) {
+        self.centerNameSectionView.bind(information: centerName)
+        self.facilityNameSectionView.bind(information: facilityName)
+        self.phoneNumberSectionView.bind(information: phoneNumber)
+        self.updateAtSectionView.bind(information: updatedAt)
+        self.addressSectionView.bind(information: address)
     }
 }

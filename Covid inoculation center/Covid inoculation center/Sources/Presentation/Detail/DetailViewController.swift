@@ -17,7 +17,7 @@ final class DetailViewController: UIViewController {
     private let viewModel: DetailViewModelable
     private let coordinator: DetailViewCoordinatorProtocol
     private let disposeBag = DisposeBag()
-    private let contentsView: DetailContentsView
+    private let detailContentsView = DetailContentsView()
 
     private let mapBarButton: UIBarButtonItem = {
         let barButton = UIBarButtonItem(title: Const.map)
@@ -28,10 +28,6 @@ final class DetailViewController: UIViewController {
     init(coordinator: DetailViewCoordinatorProtocol, viewModel: DetailViewModelable) {
         self.coordinator = coordinator
         self.viewModel = viewModel
-        self.contentsView = DetailContentsView(
-            coordinator: coordinator,
-            viewModel: viewModel
-        )
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -44,6 +40,7 @@ final class DetailViewController: UIViewController {
         self.setupNavigationItem()
         self.setupView()
         self.setupConstraint()
+        self.bind()
     }
 
     private func setupNavigationItem() {
@@ -53,22 +50,33 @@ final class DetailViewController: UIViewController {
 
     private func setupView() {
         self.view.backgroundColor = .systemBackground
-        self.view.addSubview(self.contentsView)
+        self.view.addSubview(self.detailContentsView)
     }
 
     private func setupConstraint() {
-        self.contentsView.snp.makeConstraints {
+        self.detailContentsView.snp.makeConstraints {
             $0.top.equalTo(self.view.safeAreaLayoutGuide)
             $0.leading.trailing.bottom.equalToSuperview()
         }
     }
 
     private func bind() {
+        self.detailContentsView.bind(
+            centerName: self.viewModel.centerName,
+            facilityName: self.viewModel.facilityName,
+            phoneNumber: self.viewModel.phoneNumber,
+            updatedAt: self.viewModel.updatedAt,
+            address: self.viewModel.address
+        )
+
         self.mapBarButton.rx.tap
             .bind(onNext: { [weak self] _ in
-                //                self?.coordinator.showMapView()
+                self?.coordinator.showMapView(
+                    latitude: 0,
+                    longitude: 0,
+                    centerName: self?.viewModel.centerName
+                )
             })
             .disposed(by: self.disposeBag)
     }
-
 }
