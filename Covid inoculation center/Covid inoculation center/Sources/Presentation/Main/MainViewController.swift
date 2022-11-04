@@ -117,5 +117,11 @@ final class MainViewController: UIViewController {
                 self?.tableView.setContentOffset(.zero, animated: true)
             })
             .disposed(by: self.disposeBag)
+
+        self.tableView.rx.modelSelected(CenterInformation.self)
+            .bind(onNext: { [weak self] centerInformation in
+                self?.coordinator.showDetailView()
+            })
+            .disposed(by: self.disposeBag)
     }
 }

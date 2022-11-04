@@ -7,7 +7,9 @@
 
 import UIKit
 
-protocol MainViewCoordinatorProtocol: Alertable {}
+protocol MainViewCoordinatorProtocol: Alertable {
+    func showDetailView()
+}
 
 final class MainViewCoordinator: Coordinator, MainViewCoordinatorProtocol {
     var navigationController: UINavigationController
@@ -30,5 +32,15 @@ final class MainViewCoordinator: Coordinator, MainViewCoordinatorProtocol {
         let centerListViewModel = MainViewModel(useCase: self.covidCenterListSearchUseCase)
         let mainView = MainViewController(coordinator: self, viewModel: centerListViewModel)
         self.navigationController.pushViewController(mainView, animated: true)
+    }
+
+    func showDetailView() {
+        let detailCoordinaor = DetailViewCoordinator(
+            navigationController: self.navigationController,
+            parentCoordinators: self,
+            covidCenterListSearchUseCase: self.covidCenterListSearchUseCase
+        )
+        self.childCoordinators.append(detailCoordinaor)
+        detailCoordinaor.start()
     }
 }
