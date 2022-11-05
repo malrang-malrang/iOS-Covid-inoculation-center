@@ -128,6 +128,7 @@ final class MapViewController: UIViewController, CLLocationManagerDelegate {
 
         self.viewModel.requestLocationAuthority
             .withUnretained(self)
+            .observe(on: ConcurrentDispatchQueueScheduler(qos: .background))
             .bind(onNext: { view, _ in
                 view.locationManager.requestWhenInUseAuthorization()
                 view.viewModel.locationRegistration(location: view.locationManager.location)
